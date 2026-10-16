@@ -1,33 +1,29 @@
 # Ayushmaan-Singh.github.io
-+91 8305348021 | irohulk77@gmail.com | Bhopal, MP, India
-PROFILE
+## +91 8305348021 | irohulk77@gmail.com | Bhopal, MP, India
+
+## PROFILE
+
 A passionate game developer with 5+ years of hands-on experience building games and tools with the Unity engine. Committed to timely delivery and exceptional quality, spanning mobile, desktop, and prototype projects. Background spans robotics, AI-assisted computer vision, and full-cycle game development — from ideation through publication.
-TECHNICAL SKILLS
+
+##TECHNICAL SKILLS
+
 Languages & Patterns: C++, C#, Programming Patterns, Software Architecture, Data Structures, .NET
 Unity: Unity 3D, Unity 2D, Netcode, ECS DOTS (Beginner)
 Robotics / AI / Vision: ROS, Deep Learning, Neural Networks, Computer Vision, CUDA
-EXPERIENCE
-Freelance Game Developer 07/2024 – Present
-Platforms: itch.io | Codester | GameDevMarket | Discord Game Dev Freelance Channels
-•
-Delivered 2D & 3D arcade shooters as solo developer and contractor.
-•
-Designed and shipped Casino Jackpot Game featuring multiple bonus mechanics.
-•
-Built Board Game implementations: Chess and Ludo with full rule sets.
-•
-Developed Metroidvania and platformers in 2D and 2.5D.
-•
-Created FPS and TPS titles with custom controller and camera systems.
-•
-Shipped Isometric Action RPG with turn-based and real-time hybrid combat.
-•
-Produced 2D & 3D City Builders featuring resource and grid management systems.
-•
-Released hyper-casual and rhythm games optimised for mobile.
-•
-Engineered a custom 3D pixel-art render pipeline for stylised visuals.
-•
+
+##EXPERIENCE
+###Freelance Game Developer 07/2024 – Present
+####Platforms: itch.io | Codester | GameDevMarket | Discord Game Dev Freelance Channels
+-Delivered 2D & 3D arcade shooters as solo developer and contractor.
+-Designed and shipped Casino Jackpot Game featuring multiple bonus mechanics.
+-Built Board Game implementations: Chess and Ludo with full rule sets.
+-Developed Metroidvania and platformers in 2D and 2.5D.
+-Created FPS and TPS titles with custom controller and camera systems.
+-Shipped Isometric Action RPG with turn-based and real-time hybrid combat.
+-Produced 2D & 3D City Builders featuring resource and grid management systems.
+-Released hyper-casual and rhythm games optimised for mobile.
+-Engineered a custom 3D pixel-art render pipeline for stylised visuals.
+
 Published a Unity utility package encompassing design patterns, gameplay systems, and editor extensions.
 Project Sales (itch.io | Codester | GameDevMarket | Discord) 07/2024 – Present
 •
