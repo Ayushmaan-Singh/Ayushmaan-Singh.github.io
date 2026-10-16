@@ -1,6 +1,5 @@
 # Ayushmaan-Singh.github.io
-## +91 8305348021 | irohulk77@gmail.com | Bhopal, MP, India
-
+## irohulk77@gmail.com
 ## PROFILE
 A passionate game developer with 5+ years of hands-on experience building games and tools with the Unity engine. Committed to timely delivery and exceptional quality, spanning mobile, desktop, and prototype projects. Background spans robotics, AI-assisted computer vision, and full-cycle game development — from ideation through publication.
 
