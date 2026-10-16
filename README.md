@@ -55,12 +55,15 @@ Robotics / AI / Vision: ROS, Deep Learning, Neural Networks, Computer Vision, CU
 -Developed computer vision systems for Autonomous Underwater Vehicle (AUV) navigation in underwater environments.
 
 ## EDUCATION
-B.Tech – Computer Science & Engineering | 2019 – 2023
-Vishwakarma Institute Of Technology • CGPA: 9.14 / 10
+-B.Tech – Computer Science & Engineering | 2019 – 2023
+--Vishwakarma Institute Of Technology 
+---CGPA: 9.14 / 10
 
 ## LINKS
 Portfolio: https://astek.portfoliobox.net
 GitHub: https://github.com/Ayushmaan-Singh
 LinkedIn: https://www.linkedin.com/in/ayushmaan-singh-46a580195/
-LANGUAGES
-English – Professional Proficiency | Hindi – Native
+
+## LANGUAGES
+-English – Professional Proficiency
+-Hindi – Native
