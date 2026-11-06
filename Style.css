@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Game-dev portfolio — "quest log" theme
+   Styles plain markdown output (h1–h4, p, ul, a) inside <main class="wrap">.
+   Fonts: Pixelify Sans (headings only), Atkinson Hyperlegible (all body text).
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Pixelify+Sans:wght@500;700&display=swap");
+
+:root {
+  --bg:        #15122b;   /* page background */
+  --bg-grid:   rgba(124, 108, 240, 0.07);
+  --panel:     #1e1a3f;   /* main window */
+  --panel-hi:  #2a2561;   /* section banners */
+  --line:      #7c6cf0;   /* pixel borders */
+  --shadow:    #0b0919;   /* hard drop shadow */
+  --text:      #eceaff;   /* body, ~13:1 on panel */
+  --muted:     #b9b4e3;   /* secondary, ~8:1 on panel */
+  --gold:      #ffc247;   /* section headings, bullets */
+  --cyan:      #5ce1e6;   /* links, job titles */
+
+  --font-head: "Pixelify Sans", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem 4rem;
+  background-color: var(--bg);
+  /* faint tile-map grid */
+  background-image:
+    linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+/* ---- Main window ------------------------------------------------------- */
+
+.wrap {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.75rem 2.75rem 3rem;
+  background: var(--panel);
+  /* notched pixel border + hard drop shadow */
+  box-shadow:
+    0 -4px 0 0 var(--line),
+    0 4px 0 0 var(--line),
+    -4px 0 0 0 var(--line),
+    4px 0 0 0 var(--line),
+    12px 12px 0 0 var(--shadow);
+}
+
+/* ---- Title block ------------------------------------------------------- */
+
+h1 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 5.5vw, 2.6rem);
+  line-height: 1.15;
+  color: #fff;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+  text-shadow: 4px 4px 0 #4a3fb0;
+}
+
+/* the email line directly under the title */
+h1 + h2 {
+  display: inline-block;
+  margin: 1.1rem 0 0;
+  padding: 0.2rem 0.75rem;
+  border: 2px solid var(--line);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cyan);
+  overflow-wrap: anywhere;
+}
+
+/* ---- Section banners (PROFILE, EXPERIENCE, ...) ------------------------ */
+
+h2 {
+  margin: 3rem 0 1.25rem;
+  padding: 0.5rem 1rem;
+  background: var(--panel-hi);
+  border-left: 8px solid var(--gold);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+}
+
+/* ---- Jobs / degrees ---------------------------------------------------- */
+
+h3 {
+  margin: 2rem 0 0.4rem;
+  padding-left: 0.85rem;
+  border-left: 4px solid var(--cyan);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+/* the "Platforms: ..." line under a job */
+h4 {
+  display: inline-block;
+  margin: 0.4rem 0 0.75rem;
+  padding: 0.15rem 0.7rem;
+  background: rgba(92, 225, 230, 0.12);
+  border: 2px solid rgba(92, 225, 230, 0.45);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--cyan);
+}
+
+/* ---- Text -------------------------------------------------------------- */
+
+p { margin: 0 0 1rem; max-width: 68ch; }
+
+strong, b { color: #fff; }
+em, i { color: var(--muted); }
+
+/* ---- Lists ------------------------------------------------------------- */
+
+ul {
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  margin: 0 0 0.4rem;
+  padding-left: 1.5rem;
+  max-width: 68ch;
+}
+
+/* square pixel bullet */
+li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.62em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--gold);
+}
+
+li ul { margin: 0.35rem 0 0.25rem; }
+li li::before { background: var(--cyan); width: 0.4rem; height: 0.4rem; }
+
+/* ---- Links ------------------------------------------------------------- */
+
+a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+a:hover { color: #fff; background: rgba(92, 225, 230, 0.18); }
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 4px dotted var(--line);
+}
+
+/* ---- Small screens ----------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  body { padding: 1rem 0.75rem 2.5rem; font-size: 1rem; }
+  .wrap { padding: 1.5rem 1.15rem 2rem; box-shadow:
+    0 -3px 0 0 var(--line), 0 3px 0 0 var(--line),
+    -3px 0 0 0 var(--line), 3px 0 0 0 var(--line),
+    8px 8px 0 0 var(--shadow); }
+  h2 { font-size: 1.2rem; margin-top: 2.25rem; }
+  h3 { font-size: 1.05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ---- Print: clean light resume ----------------------------------------- */
+
+@media print {
+  body { background: #fff; color: #000; padding: 0; }
+  .wrap { box-shadow: none; background: #fff; padding: 0; max-width: none; }
+  h1 { color: #000; text-shadow: none; }
+  h1 + h2, h4 { color: #000; border-color: #888; background: none; }
+  h2 { background: none; color: #000; border-left-color: #000; }
+  h3 { border-left-color: #000; color: #000; }
+  a { color: #000; text-decoration: none; }
+  li::before { background: #000; }
+}
