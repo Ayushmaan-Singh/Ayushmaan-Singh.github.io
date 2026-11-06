@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Ayushmaan-Singh.github.io
 ## irohulk77@gmail.com
 ## PROFILE
