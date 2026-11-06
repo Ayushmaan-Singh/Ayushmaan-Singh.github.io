@@ -247,11 +247,12 @@
             font-size: 0.9rem;
         }
 
-        /* --- EDUCATION / FOOTER --- */
+        /* --- EDUCATION / FOOTER GRID --- */
         .meta-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .meta-panel {
@@ -266,12 +267,6 @@
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
-
-        /* Layout responsive tweaks */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .quest-header { flex-direction: column; gap: 0.25rem; }
-        }
     </style>
 </head>
 <body>
@@ -285,7 +280,7 @@
         <div class="contact-grid">
             <div class="contact-item">📧 Email: <a href="mailto:irohulk77@gmail.com">irohulk77@gmail.com</a></div>
             <div class="contact-item">🌐 Portfolio: <a href="https://github.io">Ayushmaan-Singh.github.io</a></div>
-            <div class="contact-item">🔗 LinkedIn: <a href="https://www.linkedin.com/in/ayushmaan-singh-46a580195/" target="_blank">ayushmaan-singh</a></div>
+            <div class="contact-item">🔗 LinkedIn: <a href="https://linkedin.com" target="_blank">ayushmaan-singh</a></div>
         </div>
     </header>
 
@@ -312,3 +307,5 @@
                     <div class="skill-info"><span>C++ / Systems Programming</span><span>80%</span></div>
                     <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
                 </div>
+                <div class="skill-node">
+                    <div class="skill-info"><span>Design Patterns & Software Arch</span><span>90%</span></div>
