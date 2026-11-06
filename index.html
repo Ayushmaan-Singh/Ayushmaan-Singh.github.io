@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushmaan Singh | Sr. Game Developer</title>
+    <!-- Google Fonts for Gaming Aesthetic -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(16, 23, 41, 0.85);
+            --primary-glow: #00ffcc;
+            --secondary-glow: #ff007f;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-glow: rgba(0, 255, 204, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(0, 255, 204, 0.15) 0px, transparent 50%),
+                linear-gradient(rgba(18, 24, 38, 0.4) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(18, 24, 38, 0.4) 2px, transparent 2px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            color: var(--text-main);
+            font-family: 'Share Tech Mono', monospace;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .hud-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- HEADER / CHARACTER CARD --- */
+        header {
+            background: var(--panel-bg);
+            border: 2px solid var(--primary-glow);
+            box-shadow: 0 0 15px var(--border-glow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            clip-path: polygon(0 0, 95% 0, 100% 25px, 100% 100%, 5% 100%, 0% calc(100% - 25px));
+        }
+
+        header::before {
+            content: "PLAYER STATUS: ONLINE";
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            font-size: 0.75rem;
+            color: var(--primary-glow);
+            letter-spacing: 2px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 10px var(--primary-glow);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--secondary-glow);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-top: 1px dashed rgba(255,255,255,0.1);
+            padding-top: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--primary-glow);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .contact-item a:hover {
+            color: var(--secondary-glow);
+            text-shadow: 0 0 8px var(--secondary-glow);
+        }
+
+        /* --- SECTION HEADERS --- */
+        h2.section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 2.5rem 0 1.5rem 0;
+            display: flex;
+            align-items: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h2.section-title::before {
+            content: "▶";
+            color: var(--secondary-glow);
+            margin-right: 10px;
+            text-shadow: 0 0 8px var(--secondary-glow);
+            font-size: 1rem;
+        }
+
+        h2.section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-glow), transparent);
+            margin-left: 15px;
+        }
+
+        /* --- PROFILE --- */
+        .profile-panel {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--primary-glow);
+            padding: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* --- SKILL TREE --- */
+        .skill-tree {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-branch {
+            background: var(--panel-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-top: 3px solid var(--secondary-glow);
+            padding: 1.5rem;
+        }
+
+        .skill-branch h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .skill-node {
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-glow), var(--primary-glow));
+            box-shadow: 0 0 8px var(--primary-glow);
+        }
+
+        /* --- QUEST LOG (EXPERIENCE) --- */
+        .quest-log {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .quest-card {
+            background: var(--panel-bg);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+            padding: 1.5rem;
+            position: relative;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .quest-card:hover {
+            transform: translateX(5px);
+            border-color: var(--primary-glow);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.05);
+        }
+
+        .quest-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        .quest-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .quest-company {
+            color: var(--primary-glow);
+        }
+
+        .quest-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .quest-objectives {
+            list-style-type: none;
+            margin-top: 0.75rem;
+        }
+
+        .quest-objectives li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .quest-objectives li::before {
+            content: "[✔]";
+            position: absolute;
+            left: 0;
+            color: var(--primary-glow);
+            font-size: 0.9rem;
+        }
+
+        /* --- EDUCATION / FOOTER --- */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .meta-panel {
+            background: var(--panel-bg);
+            border: 1px dashed rgba(0, 255, 204, 0.2);
+            padding: 1.5rem;
+        }
+
+        .meta-panel h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-glow);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Layout responsive tweaks */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .quest-header { flex-direction: column; gap: 0.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hud-container">
+
+    <!-- CHARACTER HEADER -->
+    <header>
+        <h1>AYUSHMAAN SINGH</h1>
+        <div class="subtitle">Senior Unity & Systems Programmer</div>
+        <div class="contact-grid">
+            <div class="contact-item">📧 Email: <a href="mailto:irohulk77@gmail.com">irohulk77@gmail.com</a></div>
+            <div class="contact-item">🌐 Portfolio: <a href="https://github.io">Ayushmaan-Singh.github.io</a></div>
+            <div class="contact-item">🔗 LinkedIn: <a href="https://www.linkedin.com/in/ayushmaan-singh-46a580195/" target="_blank">ayushmaan-singh</a></div>
+        </div>
+    </header>
+
+    <!-- BIO PANEL -->
+    <section>
+        <h2 class="section-title">Character Profile</h2>
+        <div class="profile-panel">
+            A passionate game developer with 5+ years of hands-on experience building systems, games, and runtime tools with the Unity engine. Committed to high-performance architectures and gameplay loop balance spanning mobile, desktop, and interactive prototypes. Multi-disciplinary foundations encompassing robotics simulation, hardware control layers, and AI-assisted computer vision.
+        </div>
+    </section>
+
+    <!-- SKILLS COMPONENT -->
+    <section>
+        <h2 class="section-title">Technical Skill Tree</h2>
+        <div class="skill-tree">
+            <!-- Branch 1 -->
+            <div class="skill-branch">
+                <h3>Core & Architecture</h3>
+                <div class="skill-node">
+                    <div class="skill-info"><span>C# / .NET / OOP</span><span>95%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+                </div>
+                <div class="skill-node">
+                    <div class="skill-info"><span>C++ / Systems Programming</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                </div>
