@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 ---
 
 # Ayushmaan-Singh.github.io
