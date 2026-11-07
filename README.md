@@ -1,8 +1,3 @@
----
----
-<link rel="stylesheet" href="/assets/css/style.css">
-<main class="wrap" markdown="1">
-
 # Ayushmaan-Singh.github.io
 ## irohulk77@gmail.com
 ## PROFILE
