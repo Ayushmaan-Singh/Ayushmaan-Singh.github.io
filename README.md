@@ -1,6 +1,6 @@
 ---
 ---
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/assets/css/style.scss">
 <main class="wrap" markdown="1">
 
 # Ayushmaan-Singh.github.io
